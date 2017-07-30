@@ -15,11 +15,12 @@
   },
   "license": "MIT",
   "dependencies": {
-    "koa": "^2.0.0-alpha.6",
-    "koa-bodyparser": "^3.2.0",
-    "koa-router": "^7.0.1",
-    "mysql2": "^1.0.0-rc.11",
-    "sequelize": "^4.0.0-1"
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.2.1",
+    "pg": "^7.0.2",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.4.2"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
