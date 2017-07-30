@@ -5,4 +5,4 @@ const users = require('./users');
 
 router.use('/users', users.routes());
 
-export default router;
+module.exports = router;

@@ -1,19 +1,6 @@
-const Koa = require('koa');
-const router = require('./routes');
-const bodyParser = require('koa-bodyparser');
+const app = require('./app');
+const db = require('./models');
 
-const app = new Koa();
-
-app
-	.use(bodyParser())
-	.use(router.routes());
-	.use(router.allowedMethods());
-
-app.use(async (ctx, next) => {
-	const start = new Date();
-	await next();
-	const ms = new Date() - start;
-	console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
+db.sequelize.sync().then(() => {
+	app.listen(3000);
 });
-
-export default app;

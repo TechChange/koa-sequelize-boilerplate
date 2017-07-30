@@ -40,4 +40,4 @@ users.delete('/:id', async (ctx, next) => {
 	await next();
 });
 
-export default users;
+module.exports = users;
